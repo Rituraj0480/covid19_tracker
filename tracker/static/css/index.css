@@ -1,0 +1,58 @@
+body {
+	background-color: #EAFAF1;
+	font-family: 'Roboto', sans-serif;
+}
+
+.title {
+	margin: 0 auto;
+	text-align: center;
+}
+
+.title_img {
+	width: 60%;
+}
+
+.corona_data{
+	border-style: solid;
+	border-color: #fa7c01;
+}
+
+.corona_data div{
+	margin: 1px 0;
+	border-radius: 8px;
+}
+
+.active {
+	background: linear-gradient(to bottom,  #a5c9fd 0%,#bde5fc 100%);
+}
+
+.recovered {
+	background: linear-gradient(to bottom,  #9be89c 0%,#cdf97d 100%);
+}
+
+.deaths {
+	background: linear-gradient(to bottom,  #fe8683 0%,#ff9d9b 100%);
+}
+
+.corona_info {
+	border-style: solid;
+	border-color: #fa7c01;
+}
+
+.symptoms img {
+	width: 100%
+}
+.spread h3 {
+	color: #fa7c01;
+}
+.spread img {
+	width: 100%;
+}
+
+.prevention h3 {
+	color: #5e8e12;
+}
+
+.prevention img {
+	width: 100%;
+}

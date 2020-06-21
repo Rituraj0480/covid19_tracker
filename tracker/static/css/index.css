@@ -1,20 +1,21 @@
 body {
-	background-color: #EAFAF1;
+	background-color: #ffffff;
 	font-family: 'Roboto', sans-serif;
 }
 
 .title {
-	margin: 0 auto;
+	margin: auto;
 	text-align: center;
 }
 
 .title_img {
-	width: 60%;
+	width: 55%;
 }
 
 .corona_data{
 	border-style: solid;
 	border-color: #fa7c01;
+	background-color: #fff1b0;
 }
 
 .corona_data div{
@@ -37,10 +38,11 @@ body {
 .corona_info {
 	border-style: solid;
 	border-color: #fa7c01;
+	background-color: #fff1b0;
 }
 
 .symptoms img {
-	width: 100%
+	width: 100%;
 }
 .spread h3 {
 	color: #fa7c01;
@@ -55,4 +57,14 @@ body {
 
 .prevention img {
 	width: 100%;
+}
+
+
+/* about css */
+
+.about_content {
+	border: solid;
+	border-color: #fa7c01;
+	background-color: #fff1b0;
+
 }

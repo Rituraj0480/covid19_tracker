@@ -21,11 +21,22 @@
     <nav class="navbar">
       <div class="title">
         <img src="{% static 'image/covid19.png' %}" class="title_img" alt="Covid19 Tracker">
-        <figcaption>#WeFightCorona</figcaption>
       </div>
     </nav>
 
     <div class="container">
+
+      <ul class="nav justify-content-center mb-2 p-2">
+        <li class="nav-item">
+          <a class="nav-link active rounded" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'search' %}">Search</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'about' %}">About</a>
+        </li>
+      </ul>
 
       <div class="row corona_data m-2 p-4 rounded">
         <div class="info_title col-md col-12">
@@ -51,50 +62,51 @@
           </div>
         </div>
       </div>
+
       <div class="row corona_data m-2 p-4 rounded">
         <div class="info_title col-md col-12">
-            <h3>India</h3>
-            <span>Last Updated: {{data1.lastUpdate}}</span>
-          </div>
-          <div class="col-md col-12" style="width: 15rem;">
-            <div class="card-body active text-center">
-              <h5 class="card-title" id="data1_confirmed">{{data1.confirmed}}</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Active Cases</h6>
-            </div>
-          </div>
-          <div class="col-md col-12" style="width: 15rem;">
-            <div class="card-body recovered text-center">
-              <h5 class="card-title" id="data1_recovered">{{data1.recovered}}</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Recovered</h6>
-            </div>
-          </div>
-          <div class="col-md col-12" style="width: 15rem;">
-            <div class="card-body deaths text-center">
-              <h5 class="card-title" id="data1_deaths">{{data1.deaths}}</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Deaths</h6>
-            </div>
+          <h3>India</h3>
+          <span>Last Updated: {{data1.lastUpdate}}</span>
+        </div>
+        <div class="col-md col-12" style="width: 15rem;">
+          <div class="card-body active text-center">
+            <h5 class="card-title" id="data1_confirmed">{{data1.confirmed}}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Active Cases</h6>
           </div>
         </div>
+        <div class="col-md col-12" style="width: 15rem;">
+          <div class="card-body recovered text-center">
+            <h5 class="card-title" id="data1_recovered">{{data1.recovered}}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Recovered</h6>
+          </div>
+        </div>
+        <div class="col-md col-12" style="width: 15rem;">
+          <div class="card-body deaths text-center">
+            <h5 class="card-title" id="data1_deaths">{{data1.deaths}}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Deaths</h6>
+          </div>
+        </div>
+      </div>
     
-        <div class="row corona_info m-2 rounded">
-          <div class="col-lg p-4 m-4">
-            <div class="symptoms">
-              <img src="{% static 'image/symptoms.png' %}">
-            </div>
+      <div class="row corona_info mb-4 m-2 rounded">
+        <div class="col-lg p-4 m-4">
+          <div class="symptoms">
+            <img src="{% static 'image/symptoms.png' %}">
           </div>
-          <div class="col-lg p-4 m-4">
-            <div class="corona_right p-2">
-              <div class="spread mb-4">
-                <h3>HOW IT SPREADS</h3>
-                <img src="{% static 'image/spread.png' %}">
-              </div>
-              <div class="prevention mt-4">
-                <h3>PREVENTION</h3>
-                <img src="{% static 'image/prevention.png' %}">
-              </div>
+        </div>
+        <div class="col-lg p-4 m-4">
+          <div class="corona_right p-2">
+            <div class="spread mb-4">
+              <h3>HOW IT SPREADS</h3>
+              <img src="{% static 'image/spread.png' %}">
+            </div>
+            <div class="prevention mt-4">
+              <h3>PREVENTION</h3>
+              <img src="{% static 'image/prevention.png' %}">
             </div>
           </div>
         </div>
+      </div>
 
     </div>
 

@@ -9,7 +9,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="{% static 'image/favicon.ico' %}" />
     <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
     <title>Covid19 Tracker</title>
@@ -25,7 +25,7 @@
 
     <div class="container">
 
-      <ul class="nav justify-content-center mb-2 p-2">
+      <ul class="nav justify-content-center m-2 p-2">
           <li class="nav-item">
               <a class="nav-link" href="{% url 'home' %}">Home</a>
           </li>
@@ -37,7 +37,7 @@
           </li>
       </ul>
 
-      <form id="form-id" class="m-2" name="form">
+      <form id="form-id" class="m-2 p-2" name="form">
         <div class="form-row">
           <div class="col-12 col-md-9 mb-2 mb-md-0">
             <input type="text" name="input" class="form-control form-control-lg" placeholder="Search By Country" required = required>
@@ -49,24 +49,24 @@
         </div>
       </form>
 
-      <div class="row corona_data m-1 p-4 rounded">
+      <div class="row corona_data m-2 p-3 rounded">
         <div class="col-md col-12" style="width: 15rem;">
-            <div class="card-body active text-center">
+          <div class="card-body active text-center">
             <h5 class="card-title" id="data_confirmed">{{data.confirmed}}</h5>
             <h6 class="card-subtitle mb-2 text-muted">Active Cases</h6>
-            </div>
+          </div>
         </div>
         <div class="col-md col-12" style="width: 15rem;">
-            <div class="card-body recovered text-center">
+          <div class="card-body recovered text-center">
             <h5 class="card-title" id="data_recovered">{{data.recovered}}</h5>
             <h6 class="card-subtitle mb-2 text-muted">Recovered</h6>
-            </div>
+          </div>
         </div>
         <div class="col-md col-12" style="width: 15rem;">
-            <div class="card-body deaths text-center">
+          <div class="card-body deaths text-center">
             <h5 class="card-title" id="data_deaths">{{data.deaths}}</h5>
             <h6 class="card-subtitle mb-2 text-muted">Deaths</h6>
-            </div>
+          </div>
         </div>
       </div>
 

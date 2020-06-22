@@ -9,7 +9,7 @@ body {
 }
 
 .title_img {
-	width: 55%;
+	width: 50%;
 }
 
 .corona_data{
@@ -44,14 +44,14 @@ body {
 .symptoms img {
 	width: 100%;
 }
-.spread h3 {
+.spread h5 {
 	color: #fa7c01;
 }
 .spread img {
 	width: 100%;
 }
 
-.prevention h3 {
+.prevention h5 {
 	color: #5e8e12;
 }
 

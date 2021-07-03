@@ -1,6 +1,8 @@
 from django.shortcuts import render
 import requests
 from django.http import JsonResponse
+from .forms import VaccineForm
+
 
 def index(request):
 	url = 'https://covid19.mathdro.id/api'
@@ -25,6 +27,25 @@ def index(request):
 
 def search(request):
 	return render(request, 'search.html')
+
+def vaccine(request):
+	if request.method == "POST":
+		MyForm = VaccineForm(request.POST)
+		if MyForm.is_valid():
+			print('---------success')
+			pin_code = MyForm.cleaned_data['pin_code']
+			date = MyForm.cleaned_data['date']
+			print(pin_code)
+			print(date)
+			url = 'https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByPin?pincode=' + str(pin_code) + '&date=' + str(date)
+			r = requests.get(url).json()
+			r = r['sessions']
+			if(len(r)==0):
+				r = [{'1.':'No Vaccination Slots Available for given Pin Code and Date.'},{'Note:':'Update of Vaccination slots on website might have temporarily stopped.'}]
+	else:
+		MyForm = VaccineForm()
+		r = [{}]
+	return render(request, 'vaccine.html', {'data':r})
 
 def ajax_search(request):
 	if request.is_ajax and request.method == "GET":

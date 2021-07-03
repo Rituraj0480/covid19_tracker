@@ -40,7 +40,7 @@
           </li>
       </ul>
 
-      <form class="m-2 p-2" method="POST">
+      <!-- <form class="m-2 p-2" method="POST">
         {% csrf_token %}
         <div class="form-row">
           <div class="col">
@@ -59,8 +59,8 @@
       <p>1. Vaccine Slot Availability works only for <b>Indian Pin Codes.</b></p>
       <p>2. Data is taken from official government website using the API.</p>
       <p>3. To book the vaccine slots, you have to visit the official Indian government website.</p>
+      <p>4. Vaccine Slot Availability works only on local server with <b>Indian IP.</b></p>
       <br>
-      {{data}}
       {% for all_data in data %}
       <table style="border: 2px solid rgb(104, 65, 65);border-collapse: collapse">
             {% for key, value in all_data.items %}
@@ -71,8 +71,9 @@
             {% endfor %}
       </table>
       <br><hr><br>
-      {% endfor %}
-
+      {% endfor %} -->
+<h5>1. Vaccine Slot Availability works only on the local server with Indian IP (because of the API).</h5>
+<h5>2. Clone the github repository for using this feature.</h5>
     </div>
 
 

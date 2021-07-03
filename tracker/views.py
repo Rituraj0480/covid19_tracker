@@ -29,21 +29,21 @@ def search(request):
 	return render(request, 'search.html')
 
 def vaccine(request):
-	if request.method == "POST":
-		MyForm = VaccineForm(request.POST)
-		if MyForm.is_valid():
-			pin_code = MyForm.cleaned_data['pin_code']
-			date = MyForm.cleaned_data['date']
-			url = 'https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByPin?pincode=' + str(pin_code) + '&date=' + str(date)
-			headers = {'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36',}
-			r = requests.get(url, headers=headers).json()
-			# r = r["sessions"]
-			if(len(r)==0):
-				r = [{'1.':'No Vaccination Slots Available for given Pin Code and Date.'},{'Note:':'Update of Vaccination slots on website might have temporarily stopped.'}]
-	else:
-		MyForm = VaccineForm()
-		r = [{}]
-	return render(request, 'vaccine.html', {'data':r})
+	# if request.method == "POST":
+	# 	MyForm = VaccineForm(request.POST)
+	# 	if MyForm.is_valid():
+	# 		pin_code = MyForm.cleaned_data['pin_code']
+	# 		date = MyForm.cleaned_data['date']
+	# 		url = 'https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByPin?pincode=' + str(pin_code) + '&date=' + str(date)
+	# 		r = requests.get(url).json()
+	# 		r = r["sessions"]
+	# 		if(len(r)==0):
+	# 			r = [{'1.':'No Vaccination Slots Available for given Pin Code and Date.'},{'Note:':'Update of Vaccination slots on website might have temporarily stopped.'}]
+	# else:
+	# 	MyForm = VaccineForm()
+	# 	r = [{}]
+	# return render(request, 'vaccine.html', {'data':r})
+	return render(request, 'vaccine.html')
 
 def ajax_search(request):
 	if request.is_ajax and request.method == "GET":

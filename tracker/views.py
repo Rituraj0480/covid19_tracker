@@ -35,9 +35,9 @@ def vaccine(request):
 			pin_code = MyForm.cleaned_data['pin_code']
 			date = MyForm.cleaned_data['date']
 			url = 'https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByPin?pincode=' + str(pin_code) + '&date=' + str(date)
-			headers = {'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',}
+			headers = {'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36',}
 			r = requests.get(url, headers=headers).json()
-			r = r["sessions"]
+			# r = r["sessions"]
 			if(len(r)==0):
 				r = [{'1.':'No Vaccination Slots Available for given Pin Code and Date.'},{'Note:':'Update of Vaccination slots on website might have temporarily stopped.'}]
 	else:

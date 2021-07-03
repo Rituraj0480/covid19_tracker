@@ -34,6 +34,7 @@ def vaccine(request):
 		if MyForm.is_valid():
 			pin_code = MyForm.cleaned_data['pin_code']
 			date = MyForm.cleaned_data['date']
+			return render(request, 'vaccine.html', {'data':[{'1':pin_code,'2':date}])
 			url = 'https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByPin?pincode=' + str(pin_code) + '&date=' + str(date)
 			r = requests.get(url).json()
 			r = r["sessions"]

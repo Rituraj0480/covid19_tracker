@@ -1,7 +1,7 @@
 # covid19_tracker
 Django web app for tracking global status of Covid-19.
 
-## Update: Vaccine Slot Availability for Covid-19 using CoWIN API has been added.
+### Update: Vaccine Slot Availability for Covid-19 using CoWIN API has been added.
 
 The Indian Government had blocked the API for crawlers and servers outside of India. Further, these APIs are subject to a rate limit of 100 API calls per 5 minutes per IP. Therefore, if you want to run the Vaccine Slot Availability tool, you have to run it on local server with Indian IP address.
 
